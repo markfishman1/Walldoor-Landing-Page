@@ -1,0 +1,112 @@
+@include respond(phonePlus) {
+    .mobile-navigaion {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 0%;
+        z-index: 25;
+        background-color: #6b969c;
+        // #a1cbcc
+        // #adcfcf
+        // #50657b
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.5s ease-in-out 0.5s,
+            height 0.5s ease-in-out 0.5s, visibility 1s;
+        box-shadow: -5px -1px 20px 2px rgba($color-primary-dark, 0.8);
+        visibility: hidden;
+        &.open {
+            height: 100%;
+            transition: background-color 0.5s ease-in-out 0s,
+                height 0.5s ease-in-out 0s;
+            visibility: visible;
+        }
+
+        &__list {
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            font-size: 3rem;
+            font-weight: 500;
+            font-family: miriam;
+            text-align: center;
+
+            a:link,
+            a:visited {
+                margin-bottom: 1rem;
+                text-decoration: none;
+                color: $color-primary-white;
+                transform: translate3d(0, 20px, 1000px) rotateX(90deg);
+                opacity: 0;
+                display: block;
+            }
+
+            &__item-1 {
+                transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1) 0.5s,
+                    opacity 0.5s cubic-bezier(0.4, 0, 0, 1) 0.5s;
+            }
+            &__item-2 {
+                transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1) 0.6s,
+                    opacity 0.5s cubic-bezier(0.4, 0, 0, 1) 0.6s;
+            }
+            &__item-3 {
+                transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1) 0.7s,
+                    opacity 0.5s cubic-bezier(0.4, 0, 0, 1) 0.7s;
+            }
+
+            &__btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-primary-white;
+                border: 2px solid $color-primary-dark;
+                padding: 1.5rem 7.5rem;
+                margin-top: 30rem;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 0.3rem;
+                transform: translate3d(0, 20px, 1000px) rotateX(90deg);
+                opacity: 0;
+                display: block;
+                transition: all 0.3s;
+
+                & a:link,
+                & a:visited {
+                    color: $color-primary-dark;
+                    margin: 0;
+                }
+            }
+        }
+
+        &.open &__list a:link,
+        a:visited {
+            transform: translateZ(1000px) rotateX(0deg);
+            opacity: 1;
+        }
+
+        &.open &__list__btn {
+            transform: translate3d(0, 0, 1000px) rotateX(0deg);
+            opacity: 1;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1) 1s,
+                opacity 1s cubic-bezier(0.4, 0, 0, 1) 1s;
+        }
+    }
+    .screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.6s ease-in;
+        &.open {
+            opacity: 1;
+            z-index: 25;
+        }
+    }
+}

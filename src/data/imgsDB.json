@@ -1,0 +1,72 @@
+[
+    {
+        "doorType":"PVC",
+        "doorTypeHE":"PVC",
+        "doorsArr":[
+            {
+                "id":"1",
+                "imgUrl":"imgs/doors/קטלוג-ציפוי-ארז.png",
+                "name":"ארז",
+                "price":920
+                
+            },
+            {
+                "id":"2",
+                "imgUrl":"imgs/doors/קטלוג-ציפוי-סיוון.png",
+                "name":"סיוון",
+                "price":920
+
+            }
+        ]
+
+    },
+    {
+        "doorType":"EPOXY",
+        "doorTypeHE":"צבע בתנור",
+        "doorsArr":[
+            {
+                "id":"3",
+                "imgUrl":"imgs/doors/רותם.png",
+                "name":"רותם",
+                "price":1050
+            },
+            {
+                "id":"4",
+                "imgUrl":"imgs/doors/קטלוג-תנור-אלון.png",
+                "name":"אלון",
+                "price":1050
+            
+            },
+            {
+                "id":"5",
+                "imgUrl":"imgs/doors/קטלוג-תנור-נרקיס.png",
+                "name":"נרקיס",
+                "price":1050
+
+            },
+            {
+                "id":"6",
+                "imgUrl":"imgs/doors/קטלוג-תנור-רימון.png",
+                "name":"רימון",
+                "price":1050
+
+            }
+        ]
+
+    },
+    {
+        "doorType":"SOUNDPROOF",
+        "doorTypeHE":"מבודדות רעש",
+        "doorsArr":[
+            {
+                "id":"7",
+                "imgUrl":"imgs/doors/קטלוג-מבודד-נגה.png",
+                "name":"נגה",
+                "price":850
+            }
+            
+        ]
+
+    }
+  
+]

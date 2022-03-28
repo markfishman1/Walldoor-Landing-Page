@@ -1,0 +1,192 @@
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../../public/imgs/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: animation 10s;
+
+    @include respond(phonePlus) {
+        height: 90vh;
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: radial-gradient(
+            rgba(153, 153, 153, 0.476) 18%,
+            rgba(94, 91, 91, 0.825) 94%
+        );
+
+        @include respond(phonePlus) {
+            height: 90vh;
+        }
+    }
+    &-navbar {
+        padding-top: 0.5rem;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 15;
+        font-family: cousine;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(
+                180deg,
+                $color-primary-blue,
+                45%,
+                rgba(255, 255, 256, 0)
+            );
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        @include respond(phonePlus) {
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 20;
+        }
+        &__links {
+            z-index: 15;
+            transition: all 0.3s;
+            font-family: miriam;
+            height: 100%;
+            @include respond(phonePlus) {
+                display: none;
+            }
+            a:not(:first-child) {
+                margin-right: 6rem;
+            }
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: var(--color-primary-white);
+                font-weight: 600;
+                transition: 0.2s;
+                font-size: 2rem;
+                color: $color-primary-white;
+
+                &:not(:last-child) {
+                    margin-left: 1rem;
+                    padding-left: 1rem;
+                }
+
+                &:hover {
+                    color: $color-primary-blue;
+                    // text-shadow: 1px 1px 2px $color-primary-white;
+                }
+            }
+        }
+        .logo {
+            margin-left: -35rem;
+            margin-right: -35rem;
+            @include respond(tab-land) {
+                margin-left: -15rem;
+                margin-right: -15rem;
+            }
+            @include respond(tab-port) {
+                margin-left: -5rem;
+                margin-right: -5rem;
+            }
+            @include respond(phonePlus) {
+                margin-top: 0rem;
+                margin-left: 0rem;
+                z-index: 15;
+            }
+            img {
+                height: 13rem;
+
+                @include respond(phonePlus) {
+                    height: 10rem;
+                }
+            }
+        }
+    }
+    &-text {
+        max-width: 60rem;
+        position: absolute;
+        right: 5rem;
+        z-index: 20;
+        direction: rtl;
+        margin-right: 10rem;
+        margin-top: 20rem;
+        color: $color-primary-white;
+        @include respond(phonePlus) {
+            right: 1rem;
+            margin-right: 5rem;
+            margin-left: 5rem;
+        }
+        @include respond(phone) {
+            right: 0;
+
+            &__p1 {
+                font-size: 3rem;
+            }
+            &__p2 {
+                font-size: 2rem;
+            }
+        }
+        &__p1 {
+            font-size: 4rem;
+            font-family: katarina, cursive;
+        }
+        &__p2 {
+            font-size: 3rem;
+            font-family: mp1, sans-serif;
+        }
+    }
+    animation-name: changeBg;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+    @keyframes changeBg {
+        0% {
+            // background-image: url(../../../public/imgs/bg1.jpg);
+        }
+        20% {
+            // transform: scale(1.1);
+            // overflow: hidden;
+        }
+        25% {
+            background-image: url(../../../public/imgs/bg2.jpg);
+        }
+        50% {
+            background-image: url(../../../public/imgs/bg3.jpg);
+        }
+        75% {
+            background-image: url(../../../public/imgs/bg4.jpg);
+        }
+        100% {
+            background-image: url(../../../public/imgs/bg5.jpg);
+        }
+    }
+}
+
+.header-navbar.faded.header-navbar:after {
+    // content: '';
+    // position: absolute;
+    // width: 100%;
+    // height: 120%;
+    // top: 0;
+    // left: 0;
+    // background: linear-gradient(180deg, #062c30, 45%, rgba(255, 255, 256, 0));
+    // transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    // height: 15rem;
+}

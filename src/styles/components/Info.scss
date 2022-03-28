@@ -1,0 +1,105 @@
+.info {
+    padding: 15rem 0 0 0;
+    background-color: $color-primary-white;
+    direction: rtl;
+    // left: 0;
+    &-container {
+        margin-top: -15rem;
+        width: 95%;
+        padding: 7rem 0;
+        /* z-index: 10; */
+        margin-bottom: -5rem;
+        position: relative;
+        background-color: $color-primary-white;
+        box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+
+        &-content {
+            padding: 5rem 10rem 5rem 10rem;
+            display: flex;
+
+            @include respond(tab-port) {
+                padding: 5rem;
+            }
+            @include respond(phonePlus) {
+                flex-direction: column;
+                padding: 2rem;
+            }
+            &__title {
+                font-family: cousine;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                letter-spacing: 0.3rem;
+                margin-left: 15rem;
+                background-image: linear-gradient(
+                    to right,
+                    $color-primary-blue,
+                    $color-grey-light-3
+                );
+                @include respond(phonePlus) {
+                    margin-bottom: 2rem;
+                    font-size: 3rem;
+                    line-height: 5rem;
+                }
+                // padding: 0 1rem 1rem 1rem;
+
+                -webkit-background-clip: text;
+                color: transparent;
+                @include respond(tab-port) {
+                    margin-left: 5rem;
+                }
+                @include respond(phonePlus) {
+                    margin-left: 1rem;
+                }
+            }
+            &__text {
+                &__title {
+                    max-width: 80%;
+                    font-family: mp1;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    letter-spacing: 0.2rem;
+                    padding: 0 1rem 1rem 1rem;
+
+                    @include respond(tab-portPlus) {
+                        max-width: 80%;
+                    }
+                    @include respond(phonePlus) {
+                        max-width: 100%;
+                        // font-size: 1.8rem;
+                    }
+                }
+                &__subtitle {
+                    // font-weight: 100;
+                    font-size: 2rem;
+                    font-family: miriam;
+                    padding: 1rem;
+                }
+                &__list {
+                    display: flex;
+                    padding: 1rem;
+                    width: 100%;
+                    font-family: mp1;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.3rem;
+                    p:not(:last-child) {
+                        margin-left: 3rem;
+                    }
+                    div:not(:last-child) {
+                        margin-left: 3rem;
+                    }
+                    div {
+                        display: flex;
+                        p {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                    @include respond(phonePlus) {
+                        flex-direction: column;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

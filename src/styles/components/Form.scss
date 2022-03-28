@@ -1,0 +1,260 @@
+.form-container {
+    padding: 10rem 0 0 0;
+    // position: relative;
+    background-color: $color-primary-white;
+
+    &-upper {
+        // background-color: beige;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10rem;
+        padding: 0rem 10rem;
+        direction: rtl;
+        @include respond(phonePlus) {
+            padding: 0rem 5rem;
+        }
+
+        img {
+            height: 15rem;
+            border-left: 3px solid $color-primary-dark;
+            padding-left: 2rem;
+            margin-left: 5rem;
+        }
+        &__content {
+            h1 {
+                font-family: cousine;
+                font-size: 3rem;
+                background-image: linear-gradient(
+                    to right,
+                    $color-primary-blue,
+                    $color-grey-light-3
+                );
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            h2 {
+                font-family: miriam;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    &-lower {
+        position: relative;
+        background-color: $color-primary-white;
+        margin-bottom: -5rem;
+        background-color: #f5f5f5;
+        width: 95%;
+        padding: 5rem 5rem 15rem 5rem;
+        box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+        direction: rtl;
+        display: flex;
+        z-index: 10;
+        @include respond(tab-portPlus) {
+            flex-direction: column;
+            padding: 5rem 5rem 10rem 5rem;
+        }
+        @include respond(phonePlus) {
+            padding: 5rem 2rem 10rem 2rem;
+        }
+        // &::before {
+        //     content: '';
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     z-index: 10;
+        //     background: linear-gradient(
+        //         20deg,
+        //         rgba($color-primary-blue, 1) 20%,
+        //         hsla(0, 0%, 100%, 0) 65%
+        //     );
+        // }
+
+        // /* z-index: 10; */
+
+        &__content {
+            // background-color: beige;
+            display: flex;
+            flex-direction: column;
+            z-index: 20;
+
+            h1 {
+                font-family: katarina;
+                font-size: 3rem;
+                // line-height: 2rem;
+                letter-spacing: 0.7rem;
+                background-image: linear-gradient(
+                    to right,
+                    $color-primary-blue,
+                    $color-grey-light-3
+                );
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            h2 {
+                font-family: miriam;
+                font-size: 1.7rem;
+                font-weight: 300;
+            }
+
+            .form-content {
+                display: flex;
+                font-family: miriam;
+                margin-top: 0.5rem;
+                h1 {
+                    font-family: inherit;
+                    font-size: 1.5rem;
+                    letter-spacing: 0.1rem;
+                }
+
+                p {
+                    font-family: inherit;
+                    font-size: 1.5em;
+                }
+                & div * {
+                    border-right: 2px solid $color-primary-dark;
+                    padding-right: 1rem;
+                }
+
+                &-contact {
+                    font-family: inherit;
+                }
+                &-visit {
+                    font-family: inherit;
+                    margin-right: 3rem;
+                }
+                &-social {
+                    margin-right: 3rem;
+
+                    & div {
+                        @include respond(tab-port) {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+
+                    a {
+                        border: none;
+                        text-decoration: none;
+                        color: inherit;
+                        font-family: inherit;
+                        font-size: 1.5rem;
+                        &:hover {
+                        }
+                    }
+                }
+            }
+        }
+        .form {
+            margin-top: 2rem;
+            margin-right: 15rem;
+            display: flex;
+            z-index: 20;
+            width: 50%;
+
+            @include respond(tab-land) {
+                margin-right: 3rem;
+                width: 90%;
+            }
+            @include respond(tab-portPlus) {
+                margin-right: 0;
+                margin-top: 7rem;
+                width: 95%;
+                padding-top: 4rem;
+                border-top: 2px solid rgba($color-primary-dark, 1);
+            }
+
+            &-btn {
+                width: 100%;
+
+                @include respond(tab-land) {
+                    margin-top: 0.9rem;
+                }
+
+                @include respond(tab-portPlus) {
+                    margin-top: 1.3rem;
+                }
+            }
+
+            &-inputs {
+                width: 55%;
+                margin-left: 2rem;
+                @include respond(tab-portPlus) {
+                    width: 60%;
+                }
+                @include respond(phonePlus) {
+                    width: 50%;
+                }
+            }
+
+            &-group {
+                position: relative;
+            }
+            &-group:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+
+            &-input {
+                padding: 1.5rem 2rem;
+                border: none;
+                border-radius: 2px;
+                border-bottom: 4px solid $color-grey-dark-3;
+                background-color: rgba($color-primary-dark, 1);
+                font-family: cousine;
+                width: 100%;
+                color: $color-primary-white;
+
+                @include respond(tab-portPlus) {
+                    // width: 30rem;
+                }
+
+                &::placeholder {
+                    text-align: right;
+                    color: $color-primary-white;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 1rem 2rem rgba(black, 0.1);
+                    // border-bottom: 3px solid $color-grey-dark-3;
+                }
+                &:focus:invalid {
+                    border-bottom: 4px solid rgb(206, 30, 30);
+                }
+            }
+            &-actions {
+                width: 45%;
+                @include respond(tab-portPlus) {
+                    width: 40%;
+                }
+                @include respond(phonePlus) {
+                    width: 50%;
+                }
+                textarea {
+                    margin-bottom: 4rem;
+                    height: 14.8rem;
+                    width: 100%;
+
+                    @include respond(tab-portPlus) {
+                        // width: 150%;
+                    }
+                }
+            }
+            &-label {
+                color: $color-grey-dark-3;
+                font-size: 1.2rem;
+                font-weight: 700;
+                display: block;
+                transition: all 0.3s;
+            }
+            &-input:placeholder-shown + &-label {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-4px);
+            }
+        }
+    }
+}

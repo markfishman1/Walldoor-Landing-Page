@@ -1,0 +1,26 @@
+.user-msg {
+    position: fixed;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    height: 10rem;
+    width: 30rem;
+    background-color: rgba($color-primary-white, 0.9);
+    opacity: 0;
+    transition: opacity 0.5s;
+    p {
+        direction: rtl;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-primary-dark;
+    }
+
+    &.active {
+        opacity: 1;
+    }
+}

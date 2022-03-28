@@ -1,0 +1,64 @@
+.footer {
+    background-color: $color-primary-dark;
+    padding: 10rem 10rem 5rem 10rem;
+    position: relative;
+    text-align: center;
+    @include respond(phonePlus) {
+        padding: 10rem 0 5rem 0;
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: linear-gradient(
+            180deg,
+            rgba($color-primary-white, 1) -1%,
+            hsla(0, 0%, 100%, 0) 100%
+        );
+    }
+    h1 {
+        background-image: linear-gradient(
+            to right,
+            $color-primary-white,
+            $color-primary-white
+        );
+        background-clip: text;
+        color: transparent;
+        font-family: cousine;
+        font-size: 7rem;
+    }
+    h2 {
+        background-image: linear-gradient(
+            to right,
+            $color-primary-white,
+            $color-primary-white
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: cousine;
+        font-size: 4rem;
+        margin-top: -4rem;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: center;
+        direction: rtl;
+        h1 {
+            font-size: 2rem;
+        }
+
+        &__time {
+            font-size: 1.5rem;
+            font-family: miriam;
+            color: rgba($color-primary-white, 1);
+            border-right: 2px solid rgba($color-primary-white, 1);
+            padding-right: 2rem;
+            margin-right: 2rem;
+        }
+    }
+}
