@@ -2,15 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Hamburger from './UI/Hamburger';
 
 function AppHeader(props) {
-    // const body = document.body,
-    //     html = document.documentElement;
-    // var height = Math.max(
-    //     body.scrollHeight,
-    //     body.offsetHeight,
-    //     html.clientHeight,
-    //     html.scrollHeight,
-    //     html.offsetHeight
-    // );
     const [windowHeight, setWindowHeight] = useState(0);
     let offsetHeight;
     let faded = '';
@@ -28,10 +19,7 @@ function AppHeader(props) {
     }, []);
     return (
         <header className="header">
-            <Hamburger
-                toggleMenu={props.toggleMenu}
-                isMenuOpen={props.isMenuOpen}
-            ></Hamburger>
+            <Hamburger toggleMenu={props.toggleMenu} isMenuOpen={props.isMenuOpen}></Hamburger>
             <div className={'header-navbar ' + faded}>
                 <nav className="header-navbar__links">
                     <a href="#book">צור קשר</a>
@@ -48,9 +36,8 @@ function AppHeader(props) {
             <div className="header-text">
                 <p className="header-text__p1">איכות, בטיחות וסטייל</p>
                 <p className="header-text__p2">
-                    וולדור | Walldoor היא חברת דלתות פנים אשר לקוחותיה הם בסדר
-                    ראש העדיפויות,אנו מתמחים בייבוא דלתות איכותיות בסטנדרט גבוה.
-                    נשמח לראותכם !{' '}
+                    וולדור | Walldoor היא חברת דלתות פנים אשר לקוחותיה הם בסדר ראש העדיפויות,אנו
+                    מתמחים בייבוא דלתות איכותיות בסטנדרט גבוה. נשמח לראותכם !{' '}
                 </p>
             </div>
         </header>
