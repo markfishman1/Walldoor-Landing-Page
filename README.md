@@ -1,3 +1,7 @@
+# Walldoor Corporate Website.
+
+This project is a landing page for Walldoors business, it was made with React and Sass and has a leads management with google sheets.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
