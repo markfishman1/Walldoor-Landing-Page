@@ -1,0 +1,98 @@
+.offers{
+    padding: 5rem 0 0 0;
+    background-color: $color-primary-white;
+    z-index: 200;
+    &-title{
+        color: white;
+        direction: rtl;
+        margin:0rem 5rem 5rem 0rem;
+        font-family: cousine;
+        font-size: 2.5rem;
+        // line-height: 2rem;
+        background-image: linear-gradient(
+            to right,
+            $color-primary-blue,
+            $color-primary-ligh-blue
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &-container{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        position:relative;
+        margin-bottom: -5rem;
+        width: 90%;
+        padding: 5rem 0;
+        // border: 15px solid black;
+        box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+        background-color: $color-primary-white;
+        @include respond(tab-land){
+            width: 95%;
+        }
+        @include respond(tab-portPlus){
+            flex-direction: column;
+            width: 97%;
+            // padding: 5rem 0rem 2rem 2rem;
+            // align-items: center;
+            padding-left: 4rem;
+            justify-content: center;
+        }
+
+        &-item{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: $color-grey-light-5;
+            color: white;
+            // height: 30rem;
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+            width: 42%;
+            direction: rtl;
+            border-bottom: 5px solid $color-primary-dark;
+            @include respond(tab-land){
+                width: 47%;
+            }
+            @include respond(tab-portPlus){
+                width: 90%;
+            }
+            @include respond(phonePlus){
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+            &-content{
+                height: 60%;
+                padding: 1rem 2rem;
+                h1{
+                    font-family: katarina;
+                    color: $color-primary-dark;
+                    font-size: 4rem;
+                    letter-spacing: 0.5rem;
+                }
+                p{
+                    font-family: miriam;
+
+                    color: $color-primary-blue;
+                    font-size: 2.5rem;
+                }
+            }
+            &-action{
+                // position: relative;
+                // bottom: 2rem;
+                margin: 2rem;
+            }
+        }
+        &-item:not(:last-child){
+            margin-right: 5rem;
+            @include respond(tab-land){
+                margin-right: 3rem;
+            }
+            @include respond(tab-portPlus){
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

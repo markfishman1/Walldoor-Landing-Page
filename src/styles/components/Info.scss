@@ -33,7 +33,7 @@
                 background-image: linear-gradient(
                     to right,
                     $color-primary-blue,
-                    $color-grey-light-3
+                    $color-primary-ligh-blue
                 );
                 @include respond(phonePlus) {
                     margin-bottom: 2rem;

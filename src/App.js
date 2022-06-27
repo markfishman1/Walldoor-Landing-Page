@@ -6,7 +6,7 @@ import Form from './components/Form.js';
 import Footer from './components/Footer.js';
 import MobileNav from './components/MobileNav.js';
 import { useState, useEffect } from 'react';
-
+import Offers from './components/Offers.js';
 function App() {
     const [isMenuOpen, setMenu] = useState(false);
     const handleMenu = () => {
@@ -26,12 +26,8 @@ function App() {
     return (
         <>
             <AppHeader toggleMenu={handleMenu} isMenuOpen={isMenuOpen} />
-            {windowWidth < 660 && (
-                <MobileNav
-                    isMenuOpen={isMenuOpen}
-                    closeMenu={handleMenu}
-                ></MobileNav>
-            )}
+            {windowWidth < 660 && <MobileNav isMenuOpen={isMenuOpen} closeMenu={handleMenu}></MobileNav>}
+            <Offers></Offers>
             <Gallery></Gallery>
             <Info></Info>
             <Carousel windowWidth={windowWidth} />
