@@ -31,23 +31,19 @@ function Form() {
                     <div className="form-container-upper__content">
                         <h1>מחירים מיוחדים לקונים בסיטונאות</h1>
                         <h2>
-                            מוצרי החברה משווקים בכל רחבי הארץ למגזר הפרטי, העסקי
-                            והקבלני תוך הקפדה על מתן מענה לדרישות הלקוח.
+                            מוצרי החברה משווקים בכל רחבי הארץ למגזר הפרטי, העסקי והקבלני תוך הקפדה על מתן מענה לדרישות
+                            הלקוח.
                         </h2>
                     </div>
                 </div>
                 <section className="form-container-lower">
                     <div className="form-container-lower__content">
                         <h1>פה לשירותכם</h1>
-                        <h2>
-                            לכל שאלה או בקשה מוזמנים להשאיר פרטים ונחזור אליכם
-                            בהקדם!
-                        </h2>
+                        <h2>לכל שאלה או בקשה מוזמנים להשאיר פרטים ונחזור אליכם בהקדם!</h2>
                         <div className="form-content">
                             <div className="form-content-contact">
                                 <h1>יצירת קשר</h1>
-                                <p>רונן : 0523203095</p>
-                                <p>קולן : 0542755755</p>
+                                <p>0545228070</p>
                                 <p>nbaruch0611@gmail.com</p>
                             </div>
                             <div className="form-content-visit" id="book">
@@ -57,12 +53,8 @@ function Form() {
                             <div className="form-content-social">
                                 <h1>רשתות חברתיות</h1>
                                 <div>
-                                    <a href="https://www.facebook.com/Walldoor-101918345782840/">
-                                        פייסבוק
-                                    </a>
-                                    <a href="https://www.instagram.com/walldoor_1/?utm_medium=copy_link">
-                                        אינסטגרם
-                                    </a>
+                                    <a href="https://www.facebook.com/Walldoor-101918345782840/">פייסבוק</a>
+                                    <a href="https://www.instagram.com/walldoor_1/?utm_medium=copy_link">אינסטגרם</a>
                                 </div>
                             </div>
                         </div>

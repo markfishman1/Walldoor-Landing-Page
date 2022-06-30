@@ -8,6 +8,12 @@
     @include respond(phonePlus) {
         padding: 15rem 2rem;
     }
+    &-subtitle{
+        font-size: 2.5rem;
+        font-family: miriam;
+        color: $color-primary-dark;
+        // padding: 1rem;
+   }
     &-container {
         position: relative;
         width: 100%;
@@ -119,20 +125,20 @@
                 color: $color-primary-dark;
                 padding: 1rem;
             }
-            .gallery-titles {
-                font-size: 2.5rem;
-                font-family: miriam;
-                color: $color-primary-dark;
-                padding: 1rem;
-            }
-            p:last-of-type {
-                margin-top: -.5rem;
-                font-size: 1.5rem;
-                font-family: cousine;
-                span {
-                    font-weight: 1000;
-                }
-            }
+            // .gallery-titles {
+            //     font-size: 2.5rem;
+            //     font-family: miriam;
+            //     color: $color-primary-dark;
+            //     padding: 1rem;
+            // }
+            // p:last-of-type {
+            //     margin-top: -.5rem;
+            //     font-size: 1.5rem;
+            //     font-family: cousine;
+            //     span {
+            //         font-weight: 1000;
+            //     }
+            // }
         }
         &__actions {
             margin-top: 0.5rem;
@@ -154,4 +160,5 @@
             // }
         }
     }
+    
 }

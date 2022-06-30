@@ -16,23 +16,20 @@ function Offers() {
                 </div>
                 <div className="offers-container">
                     <div className="offers-container-item">
-                        <img src="imgs/offers/second.jpg" alt="first offer"></img>
+                        <img src="imgs/offers/second.png" alt="first offer"></img>
                         <div className="offers-container-item-content">
                             <h1>דלת אפוקסי כולל הרכבה</h1>
-                            <p>דלת אפוקסי 5 שכבות צבע בתנור ב1440 ש"ח לדלת כולל הרכבה ופרזול</p>
+                            <p>דלת אפוקסי צבועה בתנור כולל הרכבה, פרזול והובלה (איזור גוש דן) ב1,440 ש"ח בלבד</p>
                         </div>
                         <div className="btn-black offers-container-item-action">
                             <a href="#book">צרו קשר</a>
                         </div>
                     </div>
                     <div className="offers-container-item">
-                        <img src="imgs/offers/first.jpg" alt="second offer"></img>
+                        <img src="imgs/offers/first.png" alt="second offer"></img>
                         <div className="offers-container-item-content">
-                            <h1>מבצע בקנייה מרובה</h1>
-                            <p>
-                                מבצע מיוחד על כל סוגי הדלתות, 1100 ש"ח בלבד לדלת כולל הרכבה ופרזול בקנייה של 4 דלתות
-                                ומעלה
-                            </p>
+                            <h1>דלת פולימר קלאסית</h1>
+                            <p>1,100 ש"ח לדלת פולימרית מבודדת רעשים כולל פרזול, הרכבה והובלה לאיזור גוש דן </p>
                         </div>
                         <div className="btn-black offers-container-item-action">
                             <a href="#book">צרו קשר</a>
